@@ -483,7 +483,7 @@
     </div>
     <div class="contact-links reveal">
       <a href="mailto:desk@jihwanminco.com">desk@jihwanminco.com</a>
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/131363933" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </section>
@@ -562,8 +562,11 @@
     var email=document.getElementById('subemail').value.trim();
     if(!email)return;
     f.style.display='none';
-    document.getElementById('subconfirm').style.display='block';    var rposts=document.querySelectorAll('#research .post');    var rurls=['research/commercial-lease.html','research/seoul-manhattan-corridor.html','research/capital-stack.html','research/cross-border-real-estate.html'];    rposts.forEach(function(p,i){if(rurls[i]){p.style.cursor='pointer';p.setAttribute('role','link');p.setAttribute('tabindex','0');p.addEventListener('click',function(){window.location.href=rurls[i];});p.addEventListener('keydown',function(ev){if(ev.key==='Enter'){window.location.href=rurls[i];}});}});    var rposts=document.querySelectorAll('#research .post');
+    document.getElementById('subconfirm').style.display='block';
   });
+
+  var rposts=document.querySelectorAll('#research .post');    var rurls=['research/commercial-lease.html','research/seoul-manhattan-corridor.html','research/capital-stack.html','research/cross-border-real-estate.html'];    rposts.forEach(function(p,i){if(rurls[i]){p.style.cursor='pointer';p.setAttribute('role','link');p.setAttribute('tabindex','0');p.addEventListener('click',function(){window.location.href=rurls[i];});p.addEventListener('keydown',function(ev){if(ev.key==='Enter'){window.location.href=rurls[i];}});}});    var rposts=document.querySelectorAll('#research .post');
+
 </script>
 </body>
 </html>
