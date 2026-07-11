@@ -246,7 +246,7 @@
   form.sub-form input::placeholder{color:var(--slate)}
   form.sub-form input:focus{outline:none;border-color:var(--champagne)}
   .micro{font-size:.72rem;letter-spacing:.12em;color:var(--slate);margin-top:1.2rem;text-transform:uppercase}
-  .confirm{display:none;font-family:var(--serif);font-size:1.3rem;color:var(--champagne-2);font-style:italic}
+  .sub-embed{display:flex;justify-content:center;margin:0 auto 1.2rem;min-height:52px}
 
   /* ---------- CONTACT ---------- */
   .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:end}
@@ -476,11 +476,9 @@
     <span class="eyebrow" style="justify-content:center">The corridor, weekly</span>
     <h2>Read the money moving across the Pacific.</h2>
     <p class="sub">A short weekly note on capital flowing between Korea and the United States. Research, not hype. One email, no filler.</p>
-    <form class="sub-form" id="subform">
-      <input type="email" id="subemail" placeholder="you@email.com" aria-label="Email address" required>
-      <button type="submit" class="btn btn-primary">Subscribe</button>
-    </form>
-    <p class="confirm" id="subconfirm">You are on the list. The first note is on its way.</p>
+    <div class="sub-embed">
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="0573caa3-ea47-469b-a63c-766c5872b507"></script>
+    </div>
     <p class="micro">No spam. Unsubscribe anytime.</p>
   </div>
 </section>
@@ -567,15 +565,7 @@
   },{rootMargin:'-45% 0px -50% 0px'});
   sections.forEach(function(id){var el=document.getElementById(id);el&&spy.observe(el)});
 
-  // newsletter (front end only, connect to your provider to capture emails)
-  var f=document.getElementById('subform');
-  f&&f.addEventListener('submit',function(ev){
-    ev.preventDefault();
-    var email=document.getElementById('subemail').value.trim();
-    if(!email)return;
-    f.style.display='none';
-    document.getElementById('subconfirm').style.display='block';
-  });
+  // newsletter: handled by beehiiv embed (subscribe-forms.beehiiv.com/v3/loader.js) in the .sub-embed container
 
   var rposts=document.querySelectorAll('#research .post');    var rurls=['research/commercial-lease.html','research/seoul-manhattan-corridor.html','research/capital-stack.html','research/cross-border-real-estate.html'];    rposts.forEach(function(p,i){if(rurls[i]){p.style.cursor='pointer';p.setAttribute('role','link');p.setAttribute('tabindex','0');p.addEventListener('click',function(){window.location.href=rurls[i];});p.addEventListener('keydown',function(ev){if(ev.key==='Enter'){window.location.href=rurls[i];}});}});    var rposts=document.querySelectorAll('#research .post');
 
